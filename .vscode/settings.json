@@ -1,0 +1,17 @@
+{
+    "sqltools.connections": [
+        {
+            "connectionTimeout": 10,
+            "database": "",
+            "dialect": "MySQL",
+            "name": "db",
+            "password": "root1",
+            "port": 33060,
+            "server": "db",
+            "username": "root",
+            "mysqlOptions": {
+                "authProtocol": "xprotocol"
+              }
+        }
+    ]
+}
