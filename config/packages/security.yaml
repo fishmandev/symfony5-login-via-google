@@ -1,15 +1,17 @@
 security:
     # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
     providers:
-        oauth:
-            id: knpu.oauth2.user_provider
+        app_user_provider:
+            entity:
+                class: App\Entity\User
+                property: email
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
         main:
             anonymous: lazy
-            provider: oauth
+            provider: app_user_provider
             guard:
                 authenticators:
                     - App\Security\GoogleAuthenticator
